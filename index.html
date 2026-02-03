@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Government Jobs Portal - Find latest government job opportunities">
+    <title>Government Jobs Portal - Latest Govt Jobs 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-landmark"></i>
+                    <span>GovJobs Portal</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="jobs.html">All Jobs</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-outline" onclick="window.location.href='login.html'">Login</button>
+                    <button class="btn btn-primary" onclick="window.location.href='register.html'">Register</button>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Dream Government Job</h1>
+                <p>Explore thousands of government job opportunities across various departments and sectors</p>
+                <div class="search-box">
+                    <div class="search-input-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search by job title, department, or location...">
+                    </div>
+                    <button class="btn btn-primary" onclick="searchJobs()">
+                        <i class="fas fa-search"></i> Search Jobs
+                    </button>
+                </div>
+                <div class="quick-filters">
+                    <button class="filter-btn" data-category="banking">Banking</button>
+                    <button class="filter-btn" data-category="railway">Railway</button>
+                    <button class="filter-btn" data-category="defence">Defence</button>
+                    <button class="filter-btn" data-category="teaching">Teaching</button>
+                    <button class="filter-btn" data-category="police">Police</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>5000+</h3>
+                    <p>Active Jobs</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-building"></i>
+                    <h3>200+</h3>
+                    <p>Departments</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>50000+</h3>
+                    <p>Registered Users</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>10000+</h3>
+                    <p>Successful Placements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Jobs Section -->
+    <section class="featured-jobs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Government Jobs</h2>
+                <p>Latest job openings from top government organizations</p>
+            </div>
+            <div class="jobs-grid" id="featuredJobs">
+                <!-- Jobs will be dynamically loaded here -->
+            </div>
+            <div class="text-center">
+                <button class="btn btn-outline" onclick="window.location.href='jobs.html'">View All Jobs</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Browse by Category</h2>
+                <p>Explore jobs by department and sector</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filterByCategory('banking')">
+                    <i class="fas fa-university"></i>
+                    <h3>Banking</h3>
+                    <p>450+ Jobs</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('railway')">
+                    <i class="fas fa-train"></i>
+                    <h3>Railway</h3>
+                    <p>380+ Jobs</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('defence')">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Defence</h3>
+                    <p>520+ Jobs</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('teaching')">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Teaching</h3>
+                    <p>680+ Jobs</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('police')">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Police</h3>
+                    <p>290+ Jobs</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('healthcare')">
+                    <i class="fas fa-hospital"></i>
+                    <h3>Healthcare</h3>
+                    <p>560+ Jobs</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('engineering')">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Engineering</h3>
+                    <p>420+ Jobs</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('clerk')">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Clerk</h3>
+                    <p>340+ Jobs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Jobs Section -->
+    <section class="latest-jobs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Government Jobs</h2>
+                <p>Recently posted job opportunities</p>
+            </div>
+            <div class="jobs-list" id="latestJobs">
+                <!-- Latest jobs will be dynamically loaded here -->
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" onclick="window.location.href='jobs.html'">Load More Jobs</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Job Alerts</h2>
+                <p>Get notified about new government job postings directly in your inbox</p>
+                <form class="newsletter-form" id="newsletterForm" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-landmark"></i>
+                        <span>GovJobs Portal</span>
+                    </div>
+                    <p>Your trusted platform for finding government job opportunities across India. We provide accurate and timely information about all government job vacancies.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="jobs.html">All Jobs</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Job Categories</h3>
+                    <ul>
+                        <li><a href="#">Banking Jobs</a></li>
+                        <li><a href="#">Railway Jobs</a></li>
+                        <li><a href="#">Defence Jobs</a></li>
+                        <li><a href="#">Teaching Jobs</a></li>
+                        <li><a href="#">Police Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Admit Card</a></li>
+                        <li><a href="#">Results</a></li>
+                        <li><a href="#">Answer Key</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Exam Pattern</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GovJobs Portal. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
