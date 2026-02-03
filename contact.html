@@ -33,45 +33,45 @@
         </div>
     </section>
 
-    <section class="contact-section" style="padding: 4rem 0;">
+    <section class="contact-section">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
                 <div>
                     <h2 style="margin-bottom: 1rem;">Send us a Message</h2>
-                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 1rem;">
-                        <input type="text" placeholder="Your Name" required style="padding: 1rem; border: 1px solid var(--light-gray); border-radius: var(--border-radius);">
-                        <input type="email" placeholder="Your Email" required style="padding: 1rem; border: 1px solid var(--light-gray); border-radius: var(--border-radius);">
-                        <input type="text" placeholder="Subject" required style="padding: 1rem; border: 1px solid var(--light-gray); border-radius: var(--border-radius);">
-                        <textarea placeholder="Your Message" rows="5" required style="padding: 1rem; border: 1px solid var(--light-gray); border-radius: var(--border-radius); font-family: inherit;"></textarea>
+                    <form id="contactForm" class="contact-form">
+                        <input type="text" placeholder="Your Name" required class="form-input">
+                        <input type="email" placeholder="Your Email" required class="form-input">
+                        <input type="text" placeholder="Subject" required class="form-input">
+                        <textarea placeholder="Your Message" rows="5" required class="form-textarea"></textarea>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
                 <div>
                     <h2 style="margin-bottom: 1rem;">Contact Information</h2>
-                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                        <div style="display: flex; gap: 1rem;">
-                            <i class="fas fa-map-marker-alt" style="color: var(--primary-color); font-size: 1.5rem;"></i>
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
                             <div>
                                 <h4>Address</h4>
                                 <p>123 Government Plaza, New Delhi - 110001, India</p>
                             </div>
                         </div>
-                        <div style="display: flex; gap: 1rem;">
-                            <i class="fas fa-phone" style="color: var(--primary-color); font-size: 1.5rem;"></i>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
                             <div>
                                 <h4>Phone</h4>
                                 <p>+91 11 1234 5678</p>
                             </div>
                         </div>
-                        <div style="display: flex; gap: 1rem;">
-                            <i class="fas fa-envelope" style="color: var(--primary-color); font-size: 1.5rem;"></i>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>Email</h4>
                                 <p>info@govjobsportal.com</p>
                             </div>
                         </div>
-                        <div style="display: flex; gap: 1rem;">
-                            <i class="fas fa-clock" style="color: var(--primary-color); font-size: 1.5rem;"></i>
+                        <div class="contact-info-item">
+                            <i class="fas fa-clock"></i>
                             <div>
                                 <h4>Working Hours</h4>
                                 <p>Monday - Friday: 9:00 AM - 6:00 PM</p>

@@ -426,20 +426,11 @@ window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
         // Refresh layout if needed
-        console.log('Window resized');
+        animateOnScroll();
     }, 250);
 });
 
-// Add loading state management
-function showLoading() {
-    // In a full implementation, show loading spinner
-    console.log('Loading...');
-}
 
-function hideLoading() {
-    // In a full implementation, hide loading spinner
-    console.log('Loading complete');
-}
 
 // Export functions for use in other pages
 if (typeof module !== 'undefined' && module.exports) {
